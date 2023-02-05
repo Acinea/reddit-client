@@ -1,5 +1,9 @@
 import React from "react";
-import { Navlink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import RocketIcon from '@mui/icons-material/Rocket'
+import WhatshotIcon from '@mui/icons-material/Whatshot'
+import NewReleasesIcon from '@mui/icons-material/NewReleases'
+import LeaderboardIcon from '@mui/icons-material/Leaderboard'
 
 export function NavBar() {
     return (
