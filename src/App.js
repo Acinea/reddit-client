@@ -1,15 +1,13 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
-import { Banner } from './features/banner/Banner'
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Header } from './features/Header/header'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Banner />
-      </header>
-    </div>
+    <Router>
+        <Header />
+        <NavBar />
+     </Router> 
   );
 }
 

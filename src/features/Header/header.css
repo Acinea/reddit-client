@@ -1,0 +1,28 @@
+.header-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.hamburger {
+    grid-column: 1 / 2;
+    width: 50%;
+  }
+  
+.header-title {
+    grid-column: 4/7;
+    padding-right: 10vw;
+}
+
+.header-ddit {
+    color:blueviolet;
+}
+
+.header-logo {
+    height: 10vmin;
+    pointer-events: none;
+    grid-column: 3/4;
+  }
+

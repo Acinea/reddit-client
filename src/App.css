@@ -2,29 +2,7 @@
   text-align: center;
 }
 
-.Header-container {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(8, 1fr);
-  align-items: center;
-  justify-items: center;
-}
 
-.Hamburger {
-  grid-column: 1 / 2;
-  width: 50%;
-}
-
-.App-logo {
-  height: 10vmin;
-  pointer-events: none;
-  grid-column: 3/4;
-}
-
-.App-title {
-  grid-column: 4/7;
-  padding-right: 10vw;
-}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
