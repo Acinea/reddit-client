@@ -1,28 +1,40 @@
 .header-container {
-    display: grid;
+    display: flex;
     width: 100%;
+    height: 10vh;
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    background-color: #5F9EA0;
+}
+  
+.header-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
 }
 
-.hamburger {
-    grid-column: 1 / 2;
-    width: 50%;
-  }
-  
+.header-link {
+    width: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 1vw;
+
+    text-decoration: none;
+}
+
 .header-title {
-    grid-column: 4/7;
-    padding-right: 10vw;
+    color:aliceblue;
 }
 
 .header-ddit {
-    color:blueviolet;
+    color: #FF4300;
 }
 
 .header-logo {
-    height: 10vmin;
+    height: 6vh;
     pointer-events: none;
-    grid-column: 3/4;
+
   }
 

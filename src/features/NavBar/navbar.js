@@ -4,6 +4,7 @@ import RocketIcon from '@mui/icons-material/Rocket'
 import WhatshotIcon from '@mui/icons-material/Whatshot'
 import NewReleasesIcon from '@mui/icons-material/NewReleases'
 import LeaderboardIcon from '@mui/icons-material/Leaderboard'
+import './navbar.css'
 
 export function NavBar() {
     return (
