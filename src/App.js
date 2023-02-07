@@ -14,7 +14,9 @@ function App() {
         <HeaderMenu />
         <NavBar />
         <SearchBar />
-        
+        <div className='post-container'>
+          <Article />
+        </div>
      </Router> 
   );
 }

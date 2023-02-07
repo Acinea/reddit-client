@@ -7,14 +7,14 @@ export function SearchBar() {
     const [searchTerm, setSearchTerm] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const handleKeyPress = (event) => {
+    /*const handleKeyPress = (event) => {
         if(event.keyCode === 13) {
             event.preventDefault();
             dispatch(loadSearchResults(searchTerm))
             .then(()=> navigate(`/search/${searchTerm}`))
             .then(()=> setSearchTerm(''));
         }
-    }
+    }*/
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value)
@@ -28,7 +28,7 @@ export function SearchBar() {
                 placeholder="Search..."
                 value={searchTerm}
                 onChange={handleChange}
-                onKeyDown={handleKeyPress}
+                //onKeyDown={handleKeyPress}
             />
         </form>
     )
