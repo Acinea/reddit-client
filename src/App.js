@@ -5,6 +5,7 @@ import { NavBar } from './features/NavBar/navbar';
 import { HeaderMenu } from './features/Menu/menu'
 import { SearchBar } from './features/SearchBar/searchbar';
 import { Article } from './features/Articles/articles';
+import { ArticleFetcher } from './features/Articles/articleFetcher';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <NavBar />
         <SearchBar />
         <div className='post-container'>
-          <Article />
+          <ArticleFetcher />
         </div>
      </Router> 
   );
