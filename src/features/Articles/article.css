@@ -1,0 +1,6 @@
+.post-container {
+    margin: 0 5vw;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}

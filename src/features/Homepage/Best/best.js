@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ArticleHelper from './articleHelper';
-import './article.css'
+import ArticleHelper from '../../Articles/articleHelper';
 
-export function Article(props) {
-    const [articles, setArticles] = useState([])
+export function Best(props) {
+    const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        fetch("https://www.reddit.com/r/" + props.searchTerm + ".json").then(res => {
+        fetch("https://www.reddit.com/r/" + props.searchTerm + "/best.json").then(res => {
             if (res.status != 200) {
                 console.log('Error');
                 return;
@@ -20,8 +19,9 @@ export function Article(props) {
     }, [props.searchTerm])
 
     return(
-        <div className="post-container">
+        <div className='post-container'>
             {(articles != null) ? articles.map((article, index) => <ArticleHelper key={index} article={article.data} />) : ''}
         </div>
     )
 }
+
