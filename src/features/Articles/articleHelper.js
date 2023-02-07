@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 
-export function Article(props) {
+export function ArticleHelper(props) {
     
     return(
         <article>
-            
             <a href={'https://www.reddit.com' + props.article.permalink} target="_blank" >
                 <h3>{props.article.title}</h3>
-            </a>
-            
+            </a>   
         </article>
         )
 } 
 
-
-export default Article
+export default ArticleHelper

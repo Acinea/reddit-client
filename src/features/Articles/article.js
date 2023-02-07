@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Article from './articles';
+import ArticleHelper from './articleHelper';
 
-export function ArticleFetcher() {
+export function Article(props) {
     const [articles, setArticles] = useState([])
-    const [subreddit, setSubreddit] = useState('wow')
 
     useEffect(() => {
-        fetch("https://www.reddit.com/r/wow.json").then(res => {
+        fetch("https://www.reddit.com/r/" + props.searchTerm + ".json").then(res => {
             if (res.status != 200) {
                 console.log('Error');
                 return;
@@ -17,11 +16,11 @@ export function ArticleFetcher() {
                 }
             });
         })
-    }, [subreddit])
+    }, [props.searchTerm])
 
     return(
         <div>
-            {(articles != null) ? articles.map((article, index) => <Article key={index} article={article.data} />) : ''}
+            {(articles != null) ? articles.map((article, index) => <ArticleHelper key={index} article={article.data} />) : ''}
         </div>
     )
 }

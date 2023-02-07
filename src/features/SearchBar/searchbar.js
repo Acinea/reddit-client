@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Article } from '../Articles/article';
 import './searchbar.css'
 
 export function SearchBar() {
-    const [searchTerm, setSearchTerm] = useState("");
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const [searchTerm, setSearchTerm] = useState('');
+    //const dispatch = useDispatch();
+    //const navigate = useNavigate();
     /*const handleKeyPress = (event) => {
         if(event.keyCode === 13) {
             event.preventDefault();
@@ -20,16 +21,18 @@ export function SearchBar() {
         setSearchTerm(e.target.value)
     }
 
+    console.log(searchTerm)
+
     return (
-        <form className="search-bar">
+        <form className="search-bar" onSubmit={e => {e.preventDefault(); }}>
             <input 
                 className="search-input"
                 type="search"
                 placeholder="Search..."
                 value={searchTerm}
                 onChange={handleChange}
-                //onKeyDown={handleKeyPress}
             />
+            {<Article searchTerm={searchTerm} />}
         </form>
     )
 }
