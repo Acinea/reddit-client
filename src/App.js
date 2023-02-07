@@ -4,6 +4,8 @@ import { Header } from './features/Header/header'
 import { NavBar } from './features/NavBar/navbar';
 import { HeaderMenu } from './features/Menu/menu'
 import { SearchBar } from './features/SearchBar/searchbar';
+import { Article } from './features/Articles/articles';
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <HeaderMenu />
         <NavBar />
         <SearchBar />
+        
      </Router> 
   );
 }
