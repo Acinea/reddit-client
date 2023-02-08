@@ -8,11 +8,18 @@ import { Top } from '../Homepage/Top/top'
 import './searchbar.css'
 
 export function SearchBar() {
+    const [searchView, setSearchView] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
-    const [path, setPath] = useState('')
-    const location = useLocation;
     const handleChange = (e) => {
+        setSearchView(e.target.value)
+    }
+    const handleSubmit = (e) => {
         setSearchTerm(e.target.value)
+    }
+    const handleKeyPress = (e) => {
+        if(e.keyCode === 13) {
+            setSearchTerm(e.target.value)
+        }
     }
             
     return (
@@ -22,8 +29,10 @@ export function SearchBar() {
                     className="search-input"
                     type="search"
                     placeholder="Search..."
-                    value={searchTerm}
+                    value={searchView}
                     onChange={handleChange}
+                    onKeyDown={handleKeyPress}
+                    onSubmit={handleSubmit}
                 />
             </form>
             <div className='post-container'>
