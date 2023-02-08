@@ -1,10 +1,6 @@
 import React, {useState} from 'react'
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import { Article } from '../Articles/article';
-import { Best } from '../Homepage/Best/best';
-import { Hot } from '../Homepage/Hot/hot'
-import { New } from '../Homepage/New/new'
-import { Top } from '../Homepage/Top/top'
+
 import './searchbar.css'
 
 export function SearchBar() {
