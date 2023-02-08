@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import RocketIcon from '@mui/icons-material/Rocket'
 import WhatshotIcon from '@mui/icons-material/Whatshot'
 import NewReleasesIcon from '@mui/icons-material/NewReleases'
