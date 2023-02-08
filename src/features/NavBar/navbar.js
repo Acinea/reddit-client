@@ -7,19 +7,13 @@ import LeaderboardIcon from '@mui/icons-material/Leaderboard'
 import './navbar.css'
 
 export function NavBar() {
-    const [path, setPath] = useState('');
-    const location = useLocation();
-    const handleClick = (e) => {
-        setPath(location.pathname)
-        console.log(path)
-        console.log(location.pathname)
-    }
+    
     return (
         <nav className='nav-container'>
             <ul className='nav-list'>
                 <li className='nav-list-item' data-cy='best-nav'>
                     <NavLink to='/best' className='nav-list-link'>
-                        <RocketIcon className='nav-list-icon' fontSize='large' state="best" onClick={handleClick}/>
+                        <RocketIcon className='nav-list-icon' fontSize='large' state="best" />
                         <span className='nav-title'>Best</span>
                     </NavLink>
                 </li>
