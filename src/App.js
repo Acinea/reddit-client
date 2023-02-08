@@ -4,8 +4,6 @@ import { Header } from './features/Header/header'
 import { NavBar } from './features/NavBar/navbar';
 import { HeaderMenu } from './features/Menu/menu'
 import { SearchBar } from './features/SearchBar/searchbar';
-import { Homepage } from './features/Homepage/homepage';
-import { Article } from './features/Articles/article';
 
 
 function App() {
@@ -15,10 +13,6 @@ function App() {
         <HeaderMenu />
         <NavBar />
         <SearchBar />
-        <div className='post-container'>
-          <h3>Title</h3>
-          <Homepage />
-        </div>
      </Router> 
   );
 }
