@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import { Article } from '../Articles/article';
 import { Best } from '../Homepage/Best/best';
 import { Hot } from '../Homepage/Hot/hot'
@@ -9,6 +9,8 @@ import './searchbar.css'
 
 export function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('');
+    const [path, setPath] = useState('')
+    const location = useLocation;
     const handleChange = (e) => {
         setSearchTerm(e.target.value)
     }
@@ -25,15 +27,8 @@ export function SearchBar() {
                 />
             </form>
             <div className='post-container'>
-                <Routes>
-                    <Route path='/' element={<Article searchTerm={searchTerm}/>} />
-                    <Route path='/best' element={<Best searchTerm={searchTerm}/>} />
-                    <Route path='/hot' element={<Hot searchTerm={searchTerm}/>} />
-                    <Route path='/new' element={<New searchTerm={searchTerm}/>} />
-                    <Route path='/top' element={<Top searchTerm={searchTerm}/>} />``
-                </Routes>
+                <Article searchTerm={searchTerm}/>
             </div>
         </div>
-
     )
 }

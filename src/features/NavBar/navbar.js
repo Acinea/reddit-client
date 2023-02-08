@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from 'react-router-dom';
+import React, { useState } from "react";
+import { NavLink, useLocation } from 'react-router-dom';
 import RocketIcon from '@mui/icons-material/Rocket'
 import WhatshotIcon from '@mui/icons-material/Whatshot'
 import NewReleasesIcon from '@mui/icons-material/NewReleases'
@@ -7,12 +7,19 @@ import LeaderboardIcon from '@mui/icons-material/Leaderboard'
 import './navbar.css'
 
 export function NavBar() {
+    const [path, setPath] = useState('');
+    const location = useLocation();
+    const handleClick = (e) => {
+        setPath(location.pathname)
+        console.log(path)
+        console.log(location.pathname)
+    }
     return (
         <nav className='nav-container'>
             <ul className='nav-list'>
                 <li className='nav-list-item' data-cy='best-nav'>
                     <NavLink to='/best' className='nav-list-link'>
-                        <RocketIcon className='nav-list-icon' fontSize='large'/>
+                        <RocketIcon className='nav-list-icon' fontSize='large' state="best" onClick={handleClick}/>
                         <span className='nav-title'>Best</span>
                     </NavLink>
                 </li>

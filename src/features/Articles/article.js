@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import ArticleHelper from './articleHelper';
 import './article.css'
+import { useLocation } from 'react-router-dom';
 
 export function Article(props) {
     const [articles, setArticles] = useState([])
+    const location = useLocation();
+
+    
 
     useEffect(() => {
-        fetch("https://www.reddit.com/r/" + props.searchTerm + ".json").then(res => {
+        fetch("https://www.reddit.com/r/" + props.searchTerm + location.pathname + ".json").then(res => {
             if (res.status != 200) {
                 console.log('Error');
                 return;
@@ -17,7 +21,7 @@ export function Article(props) {
                 }
             });
         })
-    }, [props.searchTerm])
+    }, [props.searchTerm, location])
 
     return(
         <div className="post-container">
