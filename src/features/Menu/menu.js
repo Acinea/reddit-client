@@ -1,16 +1,10 @@
-import React, {useEffect} from 'react'
+import React, { useState } from 'react'
 import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
-import { useDispatch } from 'react-redux'
 import './menu.css'
 
 export function HeaderMenu() {
-    const dispatch = useDispatch();
-    //const selector
-
-    //useEffect(() => {})
-
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);

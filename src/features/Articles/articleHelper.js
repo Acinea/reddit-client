@@ -7,7 +7,8 @@ export function ArticleHelper(props) {
         <article>
             <a href={'https://www.reddit.com' + props.article.permalink} target="_blank" >
                 <h3>{props.article.title}</h3>
-            </a>   
+            </a>
+            <p>{props.article.selftext_html}</p>   
         </article>
         )
 } 
