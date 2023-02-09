@@ -1,3 +1,7 @@
+path {
+    pointer-events: none;
+}
+
 .nav-container {
     width: 75%;
     height: 10vh;
@@ -24,34 +28,39 @@
     margin-left: 10px;
     vertical-align: middle;
     font-size: 1.5rem;
-    
-
 }
 
 .nav-list-link {
-    display: inline-block;
+    display: flex;
+    text-decoration: none; 
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    color:  #5F9EA0;
+}
+
+.nav-list-link:hover {
+    color: #9DB0B0;
+}
+
+.nav-list-link:active {
+    color:aliceblue;
+}
+
+.active-button {
+    display: flex;
     text-decoration: none; 
     vertical-align: middle;
     text-align: center;
     margin-top: 5px;
     color: black;
     font-weight: bold;
-    color:  rgb(126, 125, 125);
+    color:  #9DB0B0;
 }
 
-.nav-list-link:hover {
-    color: rgb(174, 174, 174);
-}
 
-.nav-list-icon {
-    color: #5F9EA0;
-    margin-bottom: 5px;
-    vertical-align: middle;
-}
 
-.nav-title {
-    color: #5F9EA0;
-}
 
 /* Media queries for nav component */
 @media only screen and (min-width: 320px) and (max-width:441px) {

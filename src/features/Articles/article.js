@@ -26,6 +26,7 @@ export function Article(props) {
     return(
         <div className='search-results'>
             {(articles != null) ? articles.map((article, index) => <Post key={index} article={article.data} />) : ''}
+            <Post/>
         </div>
     )
 }

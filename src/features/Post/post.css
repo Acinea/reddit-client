@@ -1,10 +1,10 @@
-h3, h5, p {
+h3, h6, p {
     padding: 0vh 1vw;
+    margin: 1% 0%;
 }
 
 img {
     height: fit-content;
-    max-height: ;
     max-width: 100%;
 }
 
@@ -16,17 +16,13 @@ img[src="self"] {
     margin: 2vh 5vw;
     background-color: #D3ECED;
     padding: 0vw;
-    width: 75%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    border: black 1px solid;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
-.post-title {
-    background-color: #b7e7e9e8;
-}
 
 .post-contents {
     max-height: 40vh;
