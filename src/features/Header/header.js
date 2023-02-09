@@ -3,9 +3,12 @@ import {Link} from 'react-router-dom';
 import './header.css';
 
 export function Header() {
+    const refreshPage = () => {
+        window.location.reload(false);
+    }
     return (
         <div className="header-container">
-            <Link to='/' className='header-link' >
+            <Link to='/' className='header-link' onClick={refreshPage}>
             <img src={logo} alt="Reddit Logo" className="header-logo" />
             <h1 className="header-title">Kenne<span className="header-ddit">-ddit</span></h1>
             </Link>
