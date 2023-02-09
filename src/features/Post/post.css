@@ -3,6 +3,10 @@ h3, h6, p {
     margin: 1% 0%;
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     height: fit-content;
     max-width: 100%;
