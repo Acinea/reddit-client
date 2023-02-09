@@ -29,8 +29,8 @@ export function SearchBar() {
                     onKeyDown={handleKeyPress}
                 />
             </form>
-            <div className='post-container'>
-                <Article searchTerm={searchTerm}/>
+            <div>
+                <Article className='search-results' searchTerm={searchTerm} />
             </div>
         </div>
     )

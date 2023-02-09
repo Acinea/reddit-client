@@ -13,3 +13,10 @@
     background-color: aliceblue;
     border-color: transparent;
 }
+
+.search-results {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

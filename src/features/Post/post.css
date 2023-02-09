@@ -1,0 +1,38 @@
+h3, h5, p {
+    padding: 0vh 1vw;
+}
+
+img {
+    height: fit-content;
+    max-height: ;
+    max-width: 100%;
+}
+
+img[src="self"] {
+    display: none;
+}
+
+.post-container {
+    margin: 2vh 5vw;
+    background-color: #D3ECED;
+    padding: 0vw;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.post-title {
+    background-color: #b7e7e9e8;
+}
+
+.post-contents {
+    max-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

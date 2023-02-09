@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ArticleHelper from './articleHelper';
+import Post from '../Post/post';
 import './article.css'
 import { useLocation } from 'react-router-dom';
 
@@ -24,8 +24,8 @@ export function Article(props) {
     }, [props.searchTerm, location])
 
     return(
-        <div className="post-container">
-            {(articles != null) ? articles.map((article, index) => <ArticleHelper key={index} article={article.data} />) : ''}
+        <div className='search-results'>
+            {(articles != null) ? articles.map((article, index) => <Post key={index} article={article.data} />) : ''}
         </div>
     )
 }
