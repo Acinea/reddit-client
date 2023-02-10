@@ -15,7 +15,7 @@ export function Post(props) {
             <div className='post-contents'>
                 <p>{props.article.selftext}</p>
                 {props.article.is_video === true ? <video src={props.article.media.reddit_video.fallback_url} type="video/mp4" controls /> 
-                : props.article.preview ? <img src={props.article.url} /> 
+                : props.article.preview && props.article.preview.enabled === true ? <img src={props.article.url} className="post-img" alt="post-image" /> 
                 : '' }
             </div>
         </article>

@@ -1,25 +1,28 @@
 h3, h6, p {
+    max-width: 95%;;
     padding: 0vh 1vw;
     margin: 1% 0%;
     overflow: hidden;
 }
 
+p {
+    margin-bottom: 1vh;
+}
 a {
     text-decoration: none;
 }
 
-img {
+.post-img {
+    margin: 0vh 1vw 3vh 1vw;
     height: fit-content;
-    max-width: 100%;
+    max-width: 90%;
+    overflow: hidden;
 }
 
-img[src="self"] {
-    display: none;
-}
 
 video {
-    height: 80%;
-    width: 80%;
+    max-height: 80%;
+    max-width: 80%;
     overflow: hidden;
 }
 
@@ -27,7 +30,7 @@ video {
     margin: 2vh 5vw;
     background-color: #D3ECED;
     padding: 0vw;
-    width: 50vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
