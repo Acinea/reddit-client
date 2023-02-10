@@ -21,6 +21,7 @@ a {
 
 
 video {
+    margin: 0vh 1vw 3vh 1vw;
     max-height: 80%;
     max-width: 80%;
     overflow: hidden;
@@ -39,7 +40,7 @@ video {
 
 
 .post-contents {
-    max-height: 40vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
