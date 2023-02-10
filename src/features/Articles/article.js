@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 export function Article(props) {
     const [articles, setArticles] = useState([])
     const location = useLocation();
-
+    console.log(articles)
     
 
     useEffect(() => {
@@ -26,7 +26,7 @@ export function Article(props) {
     return(
         <div className='search-results'>
             {(articles != null) ? articles.map((article, index) => <Post key={index} article={article.data} />) : ''}
-            <Post/>
+
         </div>
     )
 }

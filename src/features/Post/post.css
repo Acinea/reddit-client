@@ -1,6 +1,7 @@
 h3, h6, p {
     padding: 0vh 1vw;
     margin: 1% 0%;
+    overflow: hidden;
 }
 
 a {
@@ -16,11 +17,17 @@ img[src="self"] {
     display: none;
 }
 
+video {
+    height: 80%;
+    width: 80%;
+    overflow: hidden;
+}
+
 .post-container {
     margin: 2vh 5vw;
     background-color: #D3ECED;
     padding: 0vw;
-    width: 50%;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
