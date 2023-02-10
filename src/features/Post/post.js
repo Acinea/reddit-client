@@ -7,7 +7,7 @@ export function Post(props) {
         <article className='post-container'>
             <div className='post-title'>
                 <h6>Posted by {props.article.author}</h6>
-                <a href={'https://www.reddit.com' + props.article.permalink} target="_blank" >
+                <a className="post-title-link" href={'https://www.reddit.com' + props.article.permalink} target="_blank" >
                     <h3>{props.article.title}</h3>
                 </a>
                 
