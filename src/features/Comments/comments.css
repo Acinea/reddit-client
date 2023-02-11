@@ -10,11 +10,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     min-width: 10%;
     border-right: 1px solid cadetblue;
 }
 
 .comment-content {
-    padding: 0vh 1vw;
+    padding: 0vh .5vw;
+}
+
+.comment-author {
+    margin: .5vh 0vw;
+}
+
+.comment-body {
+    font-size: small;
+    margin: .5vh 0vw;
 }

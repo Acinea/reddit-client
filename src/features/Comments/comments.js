@@ -20,8 +20,8 @@ export const Comments = ({comments}) => {
                     <ArrowDownwardIcon className={clicked === '-1' ? 'downvoted' : 'downvote'}onClick={downVoted} />
                 </div>
                 <div className="comment-content">
-                    <h5>{comments.author}</h5>
-                    <p>{comments.body}</p>
+                    <h5 className="comment-author">{comments.author}</h5>
+                    <p className="comment-body">{comments.body}</p>
                 </div>
             </ul>
         </div>

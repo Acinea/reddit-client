@@ -17,9 +17,9 @@ export function Post(props) {
     const downVoted = () => {
         clicked === '-1' ? setClicked('0') : setClicked('-1')
     };
-    const handleClick = () => {
-        console.log(comments)
+    const toggleComment = () => {
         {commentClicked === '1' ? setCommentClicked('0') : setCommentClicked('1')}
+        console.log(comments)
     }
 
     useEffect(() => {
@@ -34,14 +34,14 @@ export function Post(props) {
                 }
             })
         }
-    )}, [handleClick])
+    )}, [])
    
     return(
-        <div>
+        <div className={props.article.id}>
             <article className={commentClicked === '0' ? "comments-result-hidden" : "comments-result-revealed"}>
                 <div className='comments-container-header'>
-                    <h5>Comments</h5>
-                    <h6>Close Comments</h6>
+                    <h4 id={commentClicked === '1' ? "active-top" : ''}>Top Comments</h4>
+                    <h6 className={'close-comments-button'} onClick={toggleComment}>Close Comments</h6>
                 </div>
                 {comments.map(comment => <Comments comments={comment} />)} 
             </article>
@@ -69,7 +69,7 @@ export function Post(props) {
                     <div className="post-comments-container">
                         <div className="post-comments-button">
                             <NotesIcon fontSize='small'/>
-                            <p className="comments-text" onClick={handleClick}>{props.article.num_comments} Comments</p>
+                            <p className="comments-text" onClick={toggleComment}>{props.article.num_comments} Comments</p>
                         </div>
                     </div>
                 </div>
