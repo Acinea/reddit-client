@@ -22,9 +22,41 @@ video {
     padding: 0vw;
     width: 40vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.votes-container {
+    display: flex;
+    min-width: 10%;
+    padding: 1vh 0vw;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.votes-text {
+    padding: 0vh 0vw;
+    margin: 0;
+}
+
+.upvote {
+    cursor: pointer;
+}
+
+.upvoted {
+    cursor: pointer;
+    color: #FF4300;
+}
+
+.downvote {
+    cursor: pointer;
+}
+
+.downvoted {
+    cursor: pointer;
+    color: #9494FF;
 }
 
 .post-title-link {
