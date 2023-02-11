@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { Article } from '../Articles/article';
 
 import './searchbar.css'
@@ -6,6 +7,7 @@ import './searchbar.css'
 export function SearchBar() {
     const [searchView, setSearchView] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
+    const [height, setHeight] = useState(0)
     
     const handleChange = (e) => {
         setSearchView(e.target.value)
@@ -16,6 +18,26 @@ export function SearchBar() {
             setSearchView('')
         }
     }
+   const handleScroll = () => {
+    const position = window.pageYOffset;
+    setHeight(position)
+   }
+
+   useEffect(() => {
+    window.addEventListener('scroll', handleScroll, {passive: true});
+    return () => {
+        window.removeEventListener('scroll', handleScroll)
+    }
+   })
+    const scrollToTop = () => {
+        window.scrollTo ({
+            top:0,
+            behavior:'smooth'
+        })
+        console.log(height)
+    }
+
+    
             
     return (
         <div>
@@ -29,6 +51,9 @@ export function SearchBar() {
                     onKeyDown={handleKeyPress}
                 />
             </form>
+            <div className={height > 100 ? "scroll-to-top-visible" : "scroll-to-top-hidden"}>
+                <KeyboardArrowUpIcon onClick={scrollToTop} fontSize='large' />
+            </div>
             <Article className='search-results' searchTerm={searchTerm} />
         </div>
     )
