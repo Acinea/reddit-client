@@ -1,12 +1,8 @@
-h3, h6, p {
+h3, h6 {
     max-width: 95%;;
     padding: 0vh 1vw;
     margin: 1% 0%;
     overflow: hidden;
-}
-
-p {
-    margin-bottom: 1vh;
 }
 
 video {
@@ -75,6 +71,14 @@ video {
     align-items: center;
 }
 
+.post-text {
+    margin-bottom: 1vh;
+    max-width: 95%;;
+    padding: 0vh 1vw;
+    margin: 1% 0%;
+    overflow: hidden;
+}
+
 .post-img {
     margin: 0vh 1vw 3vh 1vw;
     height: fit-content;
@@ -82,4 +86,42 @@ video {
     overflow: hidden;
 }
 
+.post-comments-container {
+    display: flex;
+    align-items: center;
+    padding: 1vh 0vw 0.5vh 1vw;
+    border-top: 2px solid aliceblue;
+}
 
+.post-comments-button {
+    display: flex;
+    align-items: center;
+    font-size: small;
+    margin: 0;
+}
+
+.comments-result-hidden {
+    display: none;
+    position: absolute;
+    margin-top: 3%;
+    right: 1%;
+    width: 25%;
+    background-color: #D3ECED;
+    border-radius: 10px;
+    padding: 0vh 1vw 0vh 1vw
+}
+
+.comments-result-revealed {
+    position: absolute;
+    right: 1%;
+    width: 25%;
+    margin-top: 3%;
+    background-color: #D3ECED;
+    border-radius: 10px;
+    padding: 0vh 1vw 0vh 1vw
+}
+
+.comments-text {
+    padding: 0;
+    margin: 0;
+}
