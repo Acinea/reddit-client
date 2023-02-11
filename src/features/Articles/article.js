@@ -4,19 +4,19 @@ import './article.css'
 import { useLocation } from 'react-router-dom';
 
 export function Article(props) {
-    const [articles, setArticles] = useState([])
+    const [articles, setArticles] = useState([]);
     const location = useLocation();
     console.log(articles)
     
 
     useEffect(() => {
         fetch("https://www.reddit.com/r/" + props.searchTerm + location.pathname + ".json").then(res => {
-            if (res.status != 200) {
+            if (res.status !== 200) {
                 console.log('Error');
                 return;
             }
             res.json().then(data => {
-                if (data != null) {
+                if (data !== null) {
                     setArticles(data.data.children);
                 }
             });
@@ -25,8 +25,7 @@ export function Article(props) {
 
     return(
         <div className='search-results'>
-            {(articles != null) ? articles.map((article, index) => <Post key={index} article={article.data} />) : ''}
-
+            {(articles != null) ? articles.map((article, index) => <Post key={index} article={article.data} searchTerm={props.searchTerm} />) : ''}
         </div>
     )
 }
