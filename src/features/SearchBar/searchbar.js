@@ -51,7 +51,7 @@ export function SearchBar() {
                     onKeyDown={handleKeyPress}
                 />
             </form>
-            <div className={height > 100 ? "scroll-to-top-visible" : "scroll-to-top-hidden"}>
+            <div className={height > 800 ? "scroll-to-top-visible" : "scroll-to-top-hidden"}>
                 <KeyboardArrowUpIcon onClick={scrollToTop} fontSize='large' />
             </div>
             <Article className='search-results' searchTerm={searchTerm} />
