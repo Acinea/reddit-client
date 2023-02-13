@@ -6,8 +6,6 @@ import { useLocation } from 'react-router-dom';
 export function Article(props) {
     const [articles, setArticles] = useState([]);
     const location = useLocation();
-    console.log(articles)
-    
 
     useEffect(() => {
         fetch("https://www.reddit.com/r/" + props.searchTerm + location.pathname + ".json").then(res => {
