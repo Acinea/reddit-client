@@ -17,7 +17,6 @@ export function SearchBar() {
         if(e.keyCode === 13) {
             setSearchTerm(e.target.value);
             setSearchView('')
-            console.log(searchTerm)
         }
     }
    const handleScroll = () => {
