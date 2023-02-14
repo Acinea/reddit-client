@@ -1,5 +1,4 @@
 import logo from '../../reddit-logo.png';
-import { useLocation } from 'react-router-dom';
 import { Link} from 'react-router-dom';
 import './header.css';
 
