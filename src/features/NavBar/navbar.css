@@ -3,14 +3,17 @@ path {
 }
 
 .nav-container {
+    position:relative;
     width: 50%;
+    top: 10vh;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 2vh;
-    border-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom: cadetblue solid 1px;
     background-color: #D3ECED;
 }
 
