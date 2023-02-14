@@ -7,7 +7,7 @@ import './searchbar.css'
 
 export function SearchBar() {
     const [searchView, setSearchView] = useState('');
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('webdev');
     const [height, setHeight] = useState(0)
     
     const handleChange = (e) => {
@@ -17,6 +17,7 @@ export function SearchBar() {
         if(e.keyCode === 13) {
             setSearchTerm(e.target.value);
             setSearchView('')
+            console.log(searchTerm)
         }
     }
    const handleScroll = () => {
@@ -45,7 +46,7 @@ export function SearchBar() {
                 <input 
                     className="search-input"
                     type="search"
-                    placeholder="Search..."
+                    placeholder={searchTerm === '' ? 'Search...' : `r/${searchTerm}`} 
                     value={searchView}
                     onChange={handleChange}
                     onKeyDown={handleKeyPress}
