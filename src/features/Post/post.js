@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Menu } from '../Menu/menu'
 import Comments from '../Comments/comments'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -34,7 +35,7 @@ export function Post(props) {
                 }
             })
         }
-    )}, [])
+    )}, [props.article])
    
     return(
         <div className={props.article.id}>
@@ -44,6 +45,7 @@ export function Post(props) {
                     <h6 className={'close-comments-button'} onClick={toggleComment}>Close Comments</h6>
                 </div>
                 {comments.map(comment => <Comments comments={comment} />)} 
+                <h6 className={'close-comments-button'} onClick={toggleComment}>Close Comments</h6>
             </article>
             <article className='post-container'>
                 <div className="votes-container">
