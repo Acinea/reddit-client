@@ -1,7 +1,7 @@
 {
   "name": "reddit-client",
   "version": "0.1.0",
-  "homepage": "https://acinea.github.io/",
+  "homepage": "https://acinea.github.io/reddit-client",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
