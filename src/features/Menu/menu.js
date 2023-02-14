@@ -7,7 +7,7 @@ export function Menu({setSearchTerm}) {
     const [open, setOpen] = useState('0');
 
     const toggleMenu = () => {
-        {open === '1' ? setOpen('0') : setOpen('1')}
+        open === '1' ? setOpen('0') : setOpen('1')
     }
 
     const clickMenu = (e) => {
@@ -16,7 +16,7 @@ export function Menu({setSearchTerm}) {
     }
 
     useEffect(() => {
-        fetch("https://www.reddit.com/reddits" + ".json").then(res => {
+        fetch("https://www.reddit.com/reddits.json").then(res => {
             if (res.status !== 200) {
                 console.log('Error');
                 return;

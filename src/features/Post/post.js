@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Menu } from '../Menu/menu'
 import Comments from '../Comments/comments'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -19,7 +18,7 @@ export function Post(props) {
         clicked === '-1' ? setClicked('0') : setClicked('-1')
     };
     const toggleComment = () => {
-        {commentClicked === '1' ? setCommentClicked('0') : setCommentClicked('1')}
+        commentClicked === '1' ? setCommentClicked('0') : setCommentClicked('1')
         console.log(comments)
     }
 
@@ -58,14 +57,14 @@ export function Post(props) {
                 <div className="post">
                     <div className='post-title'>
                         <h6>Posted by {props.article.author}</h6>
-                        <a className="post-title-link" href={'https://www.reddit.com' + props.article.permalink} target="_blank" >
+                        <a className="post-title-link" href={'https://www.reddit.com' + props.article.permalink} target="_blank" rel="noreferrer" >
                             <h3>{props.article.title}</h3>
                         </a>
                     </div>
                     <div className='post-contents'>
                         <p className='post-text'>{props.article.selftext}</p>
                         {props.article.is_video === true ? <video src={props.article.media.reddit_video.fallback_url} type="video/mp4" controls /> 
-                        : props.article.preview && props.article.preview.enabled === true ? <img src={props.article.url} className="post-img" alt="post-image" /> 
+                        : props.article.preview && props.article.preview.enabled === true ? <img src={props.article.url} className="post-img" alt="post-contentnpm" /> 
                         : '' }
                     </div>
                     <div className="post-comments-container">
