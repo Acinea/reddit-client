@@ -143,6 +143,9 @@ video {
     margin: 0;
 }
 
+.close-comments-button{
+    text-align: right;
+}
 .close-comments-button:hover {
     cursor: pointer;
     background-color: #9DB0B0;
@@ -189,7 +192,21 @@ video {
     }
 
     .comments-result-revealed {
-        display: none;
+        display: block;
+        width: 80vw;
+        height: fit-content;
+    }
+
+    .post-comments-button:hover {
+        background-color: #D3ECED;
+    }
+    
+    .upvote:hover {
+        color: black;
+    }
+
+    .downvote:hover {
+        color: black;
     }
 }
 
@@ -199,6 +216,21 @@ video {
     }
 
     .comments-result-revealed {
-        display: none;
+        display: block;
+        width: 80vw;
+        right: 8%;
+        height: auto;
+    }
+
+    .post-comments-button:hover {
+        background-color: #D3ECED;
+    }
+
+    .upvote:hover {
+        color: black;
+    }
+
+    .downvote:hover {
+        color: black;
     }
 }
