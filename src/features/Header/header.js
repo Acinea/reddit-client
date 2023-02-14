@@ -1,4 +1,4 @@
-import logo from '../../reddit-logo.png';
+import logo from '../../images/reddit-logo.png';
 import { Link} from 'react-router-dom';
 import './header.css';
 
